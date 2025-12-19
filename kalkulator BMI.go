@@ -56,7 +56,7 @@ func main() {
 		fmt.Println("Kategori:", kategori)
 		fmt.Printf("Berat Ideal: %.2f kg\n", beratIdeal)
 
-		// Saran berat badan
+		// Saran penambahan atau pengurangan berat badan
 		if kategori == "Kurus" {
 			fmt.Printf("Saran: Tambah berat ± %.2f kg\n", beratIdeal-berat)
 		}
@@ -75,6 +75,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
