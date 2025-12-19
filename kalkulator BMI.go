@@ -8,11 +8,10 @@ func main() {
 	ulang := true
 	for ulang {
 
-		var nama string
+		var nama, opsi string
 		var berat, tinggi float64
 		valid := false
-		var pilihan string
-
+		
 		fmt.Println("\n=== Program Perhitungan BMI ===")
 
 		fmt.Print("Masukkan nama pengguna: ")
@@ -65,16 +64,17 @@ func main() {
 			fmt.Printf("Saran: Kurangi berat ± %.2f kg\n", berat-beratIdeal)
 		}
 
-		// while-loop kontrol pengulangan
+		// opsi pengulangan
 		fmt.Print("\nHitung lagi? (ya/tidak): ")
-		fmt.Scanln(&pilihan)
+		fmt.Scanln(&opsi)
 
-		if pilihan != "ya" {
+		if opsi != "ya" {
 			fmt.Println("Selesai, Terima kasih! ")
 			ulang = false
 		}
 	}
 }
+
 
 
 
