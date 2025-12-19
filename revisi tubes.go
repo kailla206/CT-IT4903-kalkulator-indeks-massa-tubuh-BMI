@@ -5,69 +5,75 @@ import (
 )
 
 func main() {
-	for {
+	ulang := true
+
+	// while-loop utama
+	for ulang {
+
 		var nama string
 		var berat, tinggi float64
+		valid := false
+		var pilihan string
 
 		fmt.Println("\n=== Program Perhitungan BMI ===")
 
-		// Input nama
-		fmt.Print("Masukkan nama Anda: ")
+		fmt.Print("Masukkan nama pengguna: ")
 		fmt.Scanln(&nama)
 
-		// Validasi berat badan
-		for {
-			fmt.Print("Masukkan berat badan (kg): ")
-			fmt.Scanln(&berat)
-			if berat > 0 {
-				break
-			}
-			fmt.Println("ERROR: Berat badan harus lebih dari 0.")
-		}
+		fmt.Print("Masukkan berat badan (kg): ")
+		fmt.Scanln(&berat)
 
-		// Validasi tinggi badan
-		for {
+		// while-loop validasi tinggi badan
+		for valid == false {
 			fmt.Print("Masukkan tinggi badan (m): ")
 			fmt.Scanln(&tinggi)
+
 			if tinggi > 0 {
-				break
+				valid = true
+			} else {
+				fmt.Println("Tinggi badan harus lebih dari 0.")
 			}
-			fmt.Println("ERROR: Tinggi badan harus lebih dari 0.")
 		}
 
 		// Hitung BMI
 		bmi := berat / (tinggi * tinggi)
 
-		// Tentukan kategori
+		// Berat badan ideal (BMI 22)
+		beratIdeal := 22 * (tinggi * tinggi)
+
+		// Kategori BMI
 		var kategori string
 		if bmi < 18.5 {
 			kategori = "Kurus"
 		} else if bmi < 25 {
 			kategori = "Normal"
-		} else if bmi < 30 {
-			kategori = "Gemuk"
 		} else {
-			kategori = "Obesitas"
+			kategori = "Gemuk"
 		}
 
-		// Hitung berat badan ideal (BMI 22)
-		beratIdeal := 22 * (tinggi * tinggi)
-
 		// Output
-		fmt.Println("\n=== Hasil Perhitungan ===")
-		fmt.Println("Nama            :", nama)
-		fmt.Printf("BMI             : %.2f\n", bmi)
-		fmt.Println("Kategori        :", kategori)
-		fmt.Printf("Berat Ideal     : %.2f kg\n", beratIdeal)
+		fmt.Println("\n=== Hasil ===")
+		fmt.Println("Nama:", nama)
+		fmt.Printf("BMI: %.2f\n", bmi)
+		fmt.Println("Kategori:", kategori)
+		fmt.Printf("Berat Ideal: %.2f kg\n", beratIdeal)
 
-		// Menu ulang
-		var ulang string
-		fmt.Print("\nHitung ulang? (y/n): ")
-		fmt.Scanln(&ulang)
+		// Saran berat badan
+		if kategori == "Kurus" {
+			fmt.Printf("Saran: Tambah berat ± %.2f kg\n", beratIdeal-berat)
+		}
 
-		if ulang != "y" && ulang != "Y" {
-			fmt.Println("Program selesai. Terima kasih!")
-			break
+		if kategori == "Gemuk" {
+			fmt.Printf("Saran: Kurangi berat ± %.2f kg\n", berat-beratIdeal)
+		}
+
+		// while-loop kontrol pengulangan
+		fmt.Print("\nHitung lagi? (ya/tidak): ")
+		fmt.Scanln(&pilihan)
+
+		if pilihan != "ya" {
+			fmt.Println("Selesai, Terima kasih! ")
+			ulang = false
 		}
 	}
 }
