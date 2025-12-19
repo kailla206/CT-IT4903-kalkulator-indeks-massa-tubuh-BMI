@@ -69,7 +69,7 @@ func main() {
 				"perbanyak konsumsi sayur dan buah",
 				"Rutin berolahraga minimal 30 menit per hari",
 				"Pola tidur yang teratur",
-				"Minum air mineralyang cukup"
+				"Minum air mineral yang cukup"
 		}
 			fmt.Println("Tips penurunan berat badan: ")
 			for i := 0; i < len(tips); i++ {
@@ -87,6 +87,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
