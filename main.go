@@ -20,7 +20,7 @@ func main() {
 		fmt.Print("Masukkan berat badan (kg): ")
 		fmt.Scanln(&berat)
 
-		// validasi tinggi badan
+		// Validasi tinggi badan
 		for valid == false {
 			fmt.Print("Masukkan tinggi badan (m): ")
 			fmt.Scanln(&tinggi)
@@ -66,7 +66,7 @@ func main() {
 
 			tips := []string{
 				"Kurangi makanan berlemak dan kadar gula yang tinggi",
-				"perbanyak konsumsi sayur dan buah",
+				"Perbanyak konsumsi sayur dan buah",
 				"Rutin berolahraga minimal 30 menit per hari",
 				"Pola tidur yang teratur",
 				"Minum air mineral yang cukup"
@@ -77,7 +77,7 @@ func main() {
 			}
 		}
 
-		// opsi pengulangan
+		// Opsi pengulangan
 		fmt.Print("\nApakah tips ini membantu? (ya/tidak): ")
 		fmt.Scanln(&opsi)
 
@@ -90,6 +90,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
