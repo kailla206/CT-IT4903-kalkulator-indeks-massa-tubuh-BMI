@@ -62,6 +62,18 @@ func main() {
 
 		if kategori == "Gemuk" {
 			fmt.Printf("Saran: Kurangi berat ± %.2f kg\n", berat - beratIdeal)
+
+			tips := []string{
+				"Kurangi makanan berlemak dan kadar gula yang tinggi",
+				"perbanyak konsumsi sayur dan buah",
+				"Rutin berolahraga minimal 30 menit per hari",
+				"Pola tidur yang teratur",
+				"Minum air mineralyang cukup"
+		}
+			fmt.Println("Tips penurunan berat badan: ")
+			for i := 0; i < len(tips); i++ {
+				fmt.Printf("-%s\n", tips[i])
+			}
 		}
 
 		// opsi pengulangan
@@ -74,6 +86,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
