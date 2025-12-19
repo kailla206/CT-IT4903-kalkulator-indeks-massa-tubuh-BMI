@@ -62,6 +62,7 @@ func main() {
 
 		if kategori == "Gemuk" {
 			fmt.Printf("Saran: Kurangi berat ± %.2f kg\n", berat - beratIdeal)
+			}
 
 			tips := []string{
 				"Kurangi makanan berlemak dan kadar gula yang tinggi",
@@ -86,6 +87,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
