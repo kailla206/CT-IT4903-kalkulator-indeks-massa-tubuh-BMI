@@ -6,8 +6,6 @@ import (
 
 func main() {
 	ulang := true
-
-	// while-loop utama
 	for ulang {
 
 		var nama string
@@ -77,4 +75,5 @@ func main() {
 		}
 	}
 }
+
 
