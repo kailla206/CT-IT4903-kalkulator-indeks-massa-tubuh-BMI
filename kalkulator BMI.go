@@ -21,7 +21,7 @@ func main() {
 		fmt.Print("Masukkan berat badan (kg): ")
 		fmt.Scanln(&berat)
 
-		// while-loop validasi tinggi badan
+		// validasi tinggi badan
 		for valid == false {
 			fmt.Print("Masukkan tinggi badan (m): ")
 			fmt.Scanln(&tinggi)
@@ -75,5 +75,6 @@ func main() {
 		}
 	}
 }
+
 
 
