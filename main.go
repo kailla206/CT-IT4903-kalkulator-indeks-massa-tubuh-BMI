@@ -32,13 +32,13 @@ func main() {
 			}
 		}
 
-		// Hitung BMI
+		// Menghitung indeks massa tubuh (BMI)
 		bmi := berat / (tinggi * tinggi)
 
-		// Berat badan ideal (BMI 22)
+		// Berat badan ideal (BMI ideal=22)
 		beratIdeal := 22 * (tinggi * tinggi)
 
-		// Kategori BMI
+		// Menentukan kategori BMI
 		var kategori string
 		if bmi < 18.5 {
 			kategori = "Kurus"
@@ -57,11 +57,11 @@ func main() {
 
 		// Saran penambahan atau pengurangan berat badan
 		if kategori == "Kurus" {
-			fmt.Printf("Saran: Tambah berat ± %.2f kg\n", beratIdeal-berat)
+			fmt.Printf("Saran: Tambah berat ± %.2f kg\n", beratIdeal - berat)
 		}
 
 		if kategori == "Gemuk" {
-			fmt.Printf("Saran: Kurangi berat ± %.2f kg\n", berat-beratIdeal)
+			fmt.Printf("Saran: Kurangi berat ± %.2f kg\n", berat - beratIdeal)
 		}
 
 		// opsi pengulangan
@@ -74,6 +74,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
