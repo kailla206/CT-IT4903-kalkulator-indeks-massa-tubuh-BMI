@@ -78,15 +78,19 @@ func main() {
 		}
 
 		// opsi pengulangan
-		fmt.Print("\nHitung lagi? (ya/tidak): ")
+		fmt.Print("\nApakah tips ini membantu? (ya/tidak): ")
 		fmt.Scanln(&opsi)
 
 		if opsi != "ya" {
-			fmt.Println("Selesai, Terima kasih! ")
+			fmt.Println("Terima kasih, senang bisa membantu! ")
+			ulang = false
+		} else {
+			fmt.Println("Mohon maaf, kami akan berusaha untuk meningkatkan layanan kami kedepannya ")
 			ulang = false
 		}
 	}
 }
+
 
 
 
