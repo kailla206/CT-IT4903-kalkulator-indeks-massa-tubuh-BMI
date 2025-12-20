@@ -58,6 +58,18 @@ func main() {
 		// Saran penambahan atau pengurangan berat badan
 		if kategori == "Kurus" {
 			fmt.Printf("Saran: Tambah berat ± %.2f kg\n", beratIdeal - berat)
+
+			tips:= []string{
+				"Pilih makanan sehat yang kaya akan nutrisi",
+				"Makan lebih sering dengan porsi kecil", 
+				"Konsumsi minuman padat kalori dan nutrisi",
+				"Tambah asupan kalori",
+				"Rutin berolahraga",
+		}
+			fmt.Println("Tips penambahan berat badan: ")
+			for i := 0; i < len(tips); i++ {
+				fmt.Printf("-%s\n", tips[i])
+			}
 		}
 
 		if kategori == "Gemuk" {
@@ -91,6 +103,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
