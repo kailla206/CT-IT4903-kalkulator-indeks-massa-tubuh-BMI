@@ -20,7 +20,17 @@ func main() {
 		fmt.Print("Masukkan berat badan (kg): ")
 		fmt.Scanln(&berat)
 
-		// Validasi tinggi badan
+		// Validasi berat dan tinggi badan
+		for valid == false {
+			fmt.Print("Masukkan berat badan (kg): ")
+			fmt.Scanln(&tinggi)
+
+			if tinggi > 0 {
+				valid = true
+			} else {
+				fmt.Println("Berat badan harus lebih dari 0.")
+			}
+		}
 		for valid == false {
 			fmt.Print("Masukkan tinggi badan (m): ")
 			fmt.Scanln(&tinggi)
@@ -91,6 +101,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
