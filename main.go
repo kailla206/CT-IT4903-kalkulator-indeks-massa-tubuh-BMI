@@ -8,7 +8,7 @@ func main() {
 	ulang := true
 	for ulang {
 
-		var nama, opsi string
+		var nama string
 		var berat, tinggi float64
 		valid := false
 		
@@ -78,10 +78,11 @@ func main() {
 		}
 
 		// Opsi pengulangan
+		var opsi string
 		fmt.Print("\nApakah tips ini membantu? (ya/tidak): ")
 		fmt.Scanln(&opsi)
 
-		if opsi != "ya" {
+		if opsi != "tidak" {
 			fmt.Println("Terima kasih, senang bisa membantu! ")
 			ulang = false
 		} else {
@@ -90,6 +91,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
