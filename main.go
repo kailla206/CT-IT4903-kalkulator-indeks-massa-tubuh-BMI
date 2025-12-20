@@ -36,7 +36,7 @@ func main() {
 			n, _ := fmt.Scanln(&tinggi)
 
 			if n != 1 {
-				fmt,Println("Input harus berupa angka ")
+				fmt.Println("Input harus berupa angka ")
 			} else if tinggi <= 0 {
 				fmt.Println("Tinggi badan harus lebih dari 0.")
 			} else {
@@ -115,4 +115,5 @@ func main() {
 		}
 	}
 }
+
 
