@@ -20,23 +20,27 @@ func main() {
 		validBerat := false
 		for validBerat == false {
 			fmt.Print("Masukkan berat badan (kg): ")
-			fmt.Scanln(&berat)
+			n, _ := fmt.Scanln(&berat)
 
-			if berat > 0 {
-				validBerat = true
+			if n != 1 {
+				fmt.Println("Input harus berupa angka ")
+			} else if berat <= 0 {
+				fmt.Println("Berat baddan harus lebih dari 0.")
 			} else {
-				fmt.Println("Berat badan harus lebih dari 0.")
+				validBerat = true
 			}
 		}
 		validTinggi := false
 		for validTinggi == false {
 			fmt.Print("Masukkan tinggi badan (m): ")
-			fmt.Scanln(&tinggi)
+			n, _ := fmt.Scanln(&tinggi)
 
-			if tinggi > 0 {
-				validTinggi = true
-			} else {
+			if n != 1 {
+				fmt,Println("Input harus berupa angka ")
+			} else if tinggi <= 0 {
 				fmt.Println("Tinggi badan harus lebih dari 0.")
+			} else {
+				validTinggi = true
 			}
 		}
 
@@ -111,3 +115,4 @@ func main() {
 		}
 	}
 }
+
