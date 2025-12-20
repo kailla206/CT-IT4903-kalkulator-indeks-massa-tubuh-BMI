@@ -29,12 +29,12 @@ func main() {
 			}
 		}
 		validTinggi := false
-		for validinggi == false {
+		for validTinggi == false {
 			fmt.Print("Masukkan tinggi badan (m): ")
 			fmt.Scanln(&tinggi)
 
 			if tinggi > 0 {
-				validinggi = true
+				validTinggi = true
 			} else {
 				fmt.Println("Tinggi badan harus lebih dari 0.")
 			}
@@ -111,6 +111,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
