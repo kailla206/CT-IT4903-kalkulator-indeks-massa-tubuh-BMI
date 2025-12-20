@@ -10,17 +10,25 @@ func main() {
 
 		var nama string
 		var berat, tinggi float64
-		valid := false
 		
 		fmt.Println("\n=== Program Perhitungan BMI ===")
 
 		fmt.Print("Masukkan nama pengguna: ")
 		fmt.Scanln(&nama)
 
-		fmt.Print("Masukkan berat badan (kg): ")
-		fmt.Scanln(&berat)
-
 		// Validasi berat dan tinggi badan
+		validBerat :+ false
+		for validBerat == false {
+			fmt.Print("Masukkan berat badan (kg): ")
+			fmt.Scanln(&berat)
+
+			if berat > 0 {
+				validBerat = true
+			} else {
+				fmt.Println("Berat badan harus lebih dari 0.")
+			}
+		}
+		validTinggi := false
 		for valid == false {
 			fmt.Print("Masukkan tinggi badan (m): ")
 			fmt.Scanln(&tinggi)
@@ -103,6 +111,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
