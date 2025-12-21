@@ -25,7 +25,7 @@ func main() {
 			if n != 1 {
 				fmt.Println("Input harus berupa angka ")
 			} else if berat <= 0 {
-				fmt.Println("Berat baddan harus lebih dari 0.")
+				fmt.Println("Berat badan harus lebih dari 0.")
 			} else {
 				validBerat = true
 			}
@@ -115,5 +115,6 @@ func main() {
 		}
 	}
 }
+
 
 
