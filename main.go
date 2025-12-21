@@ -52,9 +52,9 @@ func main() {
 
 		// Menentukan kategori BMI
 		var kategori string
-		if bmi < 18.5 {
+		if 0 < bmi && bmi < 18.5 {
 			kategori = "Kurus"
-		} else if bmi < 25 {
+		} else if 18.6 < bmi && bmi < 25 {
 			kategori = "Normal"
 		} else {
 			kategori = "Gemuk"
@@ -115,6 +115,7 @@ func main() {
 		}
 	}
 }
+
 
 
 
